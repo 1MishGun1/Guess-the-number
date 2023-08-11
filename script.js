@@ -1,21 +1,9 @@
 "use strict";
 
-// console.log(document.querySelector('.guess-message').textContent);
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 20;
 
-// document.querySelector('.guess-message').textContent =
-//   'Well done! Correct answer :)';
-
-// document.querySelector('.question').textContent = 7;
-
-// document.querySelector('.score').textContent = 11;
-
-// console.log(document.querySelector('.number-input').value);
-// document.querySelector('.number-input').value = 12;
-// console.log(document.querySelector('.number-input').value);
-
-// const eventHandler = function () {
-//   console.log(document.querySelector(".number-input").value);
-// };
+document.querySelector(".question").textContent = secretNumber;
 
 document.querySelector(".check").addEventListener("click", function () {
   const gussingNumber = Number(document.querySelector(".number-input").value);
@@ -23,5 +11,28 @@ document.querySelector(".check").addEventListener("click", function () {
 
   if (!gussingNumber) {
     document.querySelector(".guess-message").textContent = "Enter a number";
+  } else if (gussingNumber === secretNumber) {
+    document.querySelector(".guess-message").textContent =
+      "Super! You guessed right";
+  } else if (gussingNumber > secretNumber) {
+    if (score > 1) {
+      document.querySelector(".guess-message").textContent =
+        "The number is too large";
+      score--;
+      document.querySelector(".score").textContent = score;
+    } else {
+      document.querySelector(".guess-message").textContent = "Game over";
+      document.querySelector(".score").textContent = 0;
+    }
+  } else if (gussingNumber < secretNumber) {
+    if (score > 1) {
+      document.querySelector(".guess-message").textContent =
+        "The number is too small";
+      score--;
+      document.querySelector(".score").textContent = score;
+    } else {
+      document.querySelector(".guess-message").textContent = "Game over";
+      document.querySelector(".score").textContent = 0;
+    }
   }
 });
