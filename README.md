@@ -19,3 +19,19 @@ If desired, the player can restart the game.
 ## Installing the project on a pc
 * Clone this repo
 * Open file index.html
+
+## Addition/modification of the project
+* Make a copy of the repo to your account
+* Clone this repo
+* Create your own branch for work
+* Make changes to the project
+* Make a Pull Request:
+
+  1.Choose your branch
+  2.Write the name of your commit
+  3.Leave your comments
+  4.Choose from which branch you want to make a merg
+  5.Create Pull Request
+
+* Discussing changes with a reviewer
+* After the amendments are approved, the Pull Request is accepted
