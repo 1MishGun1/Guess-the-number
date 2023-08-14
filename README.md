@@ -4,10 +4,19 @@ The Game "Guess the number" it is learn project when studying JavaScript.
 
 ## Description
 
-A simple game of guessing numbers from 1 to 20. The player can either guess the numbers himself or guess them.
-The game guesses any number randomly and asks the user to guess this number.
-The user enters a number. If his assumption is incorrect, then the game should say whether the number is greater or less than the number guessed, and then offer the user to try again.
-If the user guesses the number, the game is considered completed.
+1. The range of numbers (from 1 to 20) in which the number will be guessed by pressing the corresponding buttons on the screen.
+
+2. The browser randomly guesses a number in the selected range.
+
+3. The player offers his variants of numbers by entering them into a special field on the screen.
+
+4. The browser responds with "Too large a number" or "Too small a number" if the proposed number does not match the one made.
+
+5. The player continues to offer his options until he guesses the hidden number.
+
+6. The browser announces the winner - the player who guessed the hidden number.
+
+7. The player can play again by pressing the "Restart!" button.
 
 If desired, the player can restart the game.
 
